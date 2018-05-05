@@ -1,0 +1,262 @@
+.form-type-1{
+
+    .form__inline {
+       .form__group{
+         display: inline-block;
+         vertical-align: top;
+         margin-right: 4px !important;
+         
+         &:last-child {
+            margin-right: 0 !important;
+         }
+         &.two_cols_form{
+           width: 48%;
+           margin-right: 20px;
+  
+           input{
+              min-width: 225px;
+            }
+   
+           &:last-child{
+                margin-right: 0;
+           }
+  
+           @media screen and (min-width:921px) and (max-width:1074px) {
+              width: 100% !important;
+              margin-right: 13px !important;
+              input{
+                  min-width: 218px !important;
+              }
+           }
+           @media screen and (min-width:920px) {
+              width: 49%;
+              margin-right: 5px;
+              input{
+                  min-width: initial;
+              }
+           }
+           @media screen and (max-width:671px) {
+              width: 100%;
+               margin-right: 0px;
+              input{
+                  min-width: initial !important;
+              }
+           }
+           
+           
+  
+          
+         }
+  
+  
+       }
+  
+    }
+
+    .form__group {
+        margin: 10px 0 30px;
+    }
+    .form__label,
+    .form-error-notification{
+        display: block;
+        font-weight: 700;
+        font-size: 11px;
+        color: #434C5E !important;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: left;
+        max-width: 260px;
+    }
+    .form-error-notification{
+      margin-top:5px;
+      font-family: $font-type-regular;
+      &.error{
+          color:#e10000 !important;
+      }
+   
+    }
+    a.form-simple-button {
+        display: block;
+        font-weight: 700;
+        font-size: 11px;
+        color: #434C5E;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .form__input, 
+    .form__select, 
+    .form__textarea{
+        height: 50px;
+        display: block;
+        min-width: 260px;
+        max-width: 260px;
+        font-size: 14px;
+        color: #596377;
+        border: 1px solid #D4D9E2;
+        @include border-radius(3px);
+        padding: 15px;
+        width: 100%;
+        @include box-sizing(border-box);
+        font-size: 14px;
+        color: #596377;
+        outline: 0;
+        transition: border-color .2s ease;
+        margin:0;
+  
+      &.error{
+          border: 1px solid #fb8585 !important;
+      }
+  
+    }
+    .form__textarea{
+        height: 100px;
+    }
+    .form__input,
+    .form__textarea{
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: $color--text;
+          @include opacity(0.27);
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+          color:$color--text;
+          @include opacity(0.27);
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+          color: $color--text;
+          @include opacity(0.27);
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+          color: $color--text;
+          @include opacity(0.27);
+      }
+    }
+    .control {
+      display: inline-block;
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      text-align: left;
+      min-width: 203px;
+      float: left;
+      font-weight: 700;
+      font-size: 11px;
+      color: #434C5E;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  
+    .control input {
+        position: absolute;
+        z-index: -1;
+        @include opacity(0);
+    }
+  
+    .control__indicator {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #e6e6e6;
+        @include border-radius(50px);
+    }
+  
+    .control--radio .control__indicator {
+        @include border-radius(50%);
+    }
+  
+    .control:hover input~.control__indicator,
+    .control input:focus~.control__indicator {
+        background: #ccc;
+    }
+  
+    .control input:checked~.control__indicator {
+        background: $color--primary;
+    }
+  
+    .control:hover input:not([disabled]):checked~.control__indicator,
+    .control input:checked:focus~.control__indicator {
+        background: $color--primary;
+    }
+  
+    .control input:disabled~.control__indicator {
+        background: #e6e6e6;
+        @include opacity(0.6);
+        pointer-events: none;
+    }
+  
+    .control__indicator:after {
+        content: '';
+        position: absolute;
+        display: none;
+    }
+  
+    .control input:checked~.control__indicator:after {
+        display: block;
+    }
+  
+    .control--checkbox .control__indicator:after {
+        left: 7px;
+        top: 4px;
+        width: 3px;
+        height: 8px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    .control--checkbox a{
+      color:$color--primary;
+    }
+    .control--checkbox input:disabled~.control__indicator:after {
+        border-color: #7b7b7b;
+    }
+  
+    .control--radio .control__indicator:after {
+        left: 7px;
+        top: 7px;
+        height: 6px;
+        width: 6px;
+        @include border-radius(50%);
+        background: #fff;
+    }
+  
+    .control--radio input:disabled~.control__indicator:after {
+        background: #7b7b7b;
+    }
+  
+  
+  
+  }
+  
+
+  .input_with_icon{
+      position: relative;
+      img {
+        position: absolute;
+        left: 14px;
+        top: 17px;
+      }
+      input{
+          &.form__input{
+            padding-left: 46px !important;
+          }
+          
+      }
+
+      &.with_label{
+        img {
+            top:38px;
+        }
+      }
+  }
+  input:focus,
+  textarea:focus{
+      border:1px solid #989898 !important;
+  }
+  
+  
+    

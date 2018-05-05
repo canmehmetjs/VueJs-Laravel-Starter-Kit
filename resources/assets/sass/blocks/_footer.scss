@@ -1,0 +1,40 @@
+footer{
+    background:$color--secondary;
+    color:#fff;
+    
+    h3{
+        color:#fff;
+    }
+
+    .footer-top {
+        padding: 90px 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #424359;
+        margin-bottom: 60px;
+            
+        
+    }
+    .footer-middle{
+        padding-bottom: 70px;
+        a{
+            color: #fff;
+            opacity: 1;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            &:hover{
+                margin-left:2px;
+            }
+        }
+        h6{
+            margin-bottom: 30px;
+            font-size:12px;
+        }
+        
+    }
+    .footer-bottom{
+        .footer-socials{
+
+        }
+    }
+
+}

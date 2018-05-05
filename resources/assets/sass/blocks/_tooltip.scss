@@ -1,0 +1,50 @@
+  .tooltip {
+    position: relative;
+
+    &:before,
+    &:after{
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+    }
+
+    &:after{
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid $color--text;
+        border-left: 6px solid transparent;
+        content: '';
+        height: 0;
+            top: 20px;
+            left: 20px;
+        width: 0;
+    }
+    &:before{
+        background: $color--text;
+        border-radius: 2px;
+        color: #fff;
+        content: attr(data-title);
+        font-size: 14px;
+        padding: 6px 10px;
+          top: 26px;
+        white-space: nowrap;
+        font-family: "Mulibold";
+    }
+
+    &.fade{
+        &:after,
+        &:before{
+            transform: translate3d(0,-10px,0);
+            transition: all .15s ease-in-out;
+        }
+
+        &:hover{
+            &:after,
+            &:before{
+                opacity: 1;
+                transform: translate3d(0,0,0);
+            }
+        }
+    }
+
+  }

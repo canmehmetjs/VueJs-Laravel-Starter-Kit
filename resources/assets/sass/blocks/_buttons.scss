@@ -1,0 +1,164 @@
+.btn-default {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "mulibold";
+    color:$color--text-light;
+}
+
+.signup_button{
+    background: $color--secondary;
+    color: #fff ;
+    padding: 10px 20px;
+    border-radius:50px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    &:hover{
+        box-shadow: 0px 3px 17px 0px rgba(170, 170, 170, 0.29);
+    }
+}
+
+button, 
+a{
+    &.loycha_btn{
+        position: relative;
+        display: inline-block;
+        margin:15px 0;
+        
+        &.btn-big{
+            position: relative;
+            display: block;
+            padding: 16px 30px;
+            text-transform: uppercase;
+            box-sizing:border-box;
+           border-radius:50px;
+            border:2px solid;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 0.7px;
+            min-width: 200px;
+            text-align: center;
+            &:hover{
+                box-shadow: 0px 3px 17px 0px rgba(170, 170, 170, 0.39);
+            }
+            img {
+                vertical-align: middle;
+                width: 13px;
+            }
+            svg {
+               vertical-align: middle;
+               margin-right: 8px;
+            }
+    
+        }
+        &.btn-small{
+            position: relative;
+            display: block;
+            padding: 10px 28px;
+            text-transform: uppercase;
+            box-sizing:border-box;
+           border-radius:50px;
+            border:2px solid;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 0.7px;
+            min-width: 170px;
+            text-align: center;
+            &:hover{
+                box-shadow: 0px 3px 17px 0px rgba(170, 170, 170, 0.39);
+            }
+            img {
+                vertical-align: middle;
+                width: 13px;
+            }
+            svg {
+               vertical-align: middle;
+               margin-right: 8px;
+            }
+    
+        }
+    
+        &.bg--ios{
+            background:#000;
+            border-color:#000;
+            color:#fff;
+            svg{
+                fill:#fff;
+            }
+        }
+        &.bg--android{
+            background:$color--text-green;
+            border-color:$color--text-green;
+            color:#fff;
+            svg{
+                fill:#fff;
+            }
+        }
+    
+        &.bg--primary{
+            background:$color--primary;
+            border-color:$color--primary;
+            color:#fff;
+            svg{
+                fill:#fff;
+            }
+        }
+        &.bg--secondary{
+            background:$color--secondary;
+            border-color:$color--secondary;
+            color:#fff;
+            svg{
+                fill:#fff;
+            }
+            
+        }
+        &.bg--text{
+            background:$color--text;
+            border-color:$color--text;
+            color:#fff;
+            svg{
+                fill:#fff;
+            }
+        }
+        &.bg--white{
+            background:#fff;
+            border-color:$color--text;
+            color:$color--text;
+            svg{
+                fill:$color--text;
+            }
+        }
+        &.border-outline-grey{
+            background:none;
+            border-color:$color--text;
+            color:$color--text;
+    
+            svg{
+                fill:$color--text;
+            }
+        }
+        &.border-outline-secondary{
+            background:none;
+            border-color:$color--secondary;
+            color:$color--secondary;
+    
+            svg{
+                fill:$color--secondary;
+            }
+        }
+        
+       
+    
+        &.inline-buttons{
+            .btn-big{
+                display:inline-block;
+                margin-right: 20px;
+                margin-bottom:20px;
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+    }
+}
